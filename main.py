@@ -25,7 +25,7 @@ password.send_keys("Success!2*")
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "loginButton"))).click()
 # click quotation
 driver.get('https://inscrm-uat.successit.net/AllInsCRM/#/Quotation_List_v1')
-driver.find_elements_by_class_name('btn app-button dropdown-toggle btn-primary')
+driver.find_elements_by_css_selector(".btn .app-button .dropdown-toggle .btn-primary")
 
 # driver.find_element_by_anchor('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-dashboard/div/main/div/aside/app-partial-leftnav/section/ul/li[2]/a[2]/span[2]')
 # driver.find_element_by_css_selector("a[name='QuotationLink_SinglePage']").click()
