@@ -1,4 +1,4 @@
-# Selenium Bot
+# Selenium Bot 🤖
 
 ## Installation
 in root
