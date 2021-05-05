@@ -7,7 +7,7 @@ in root
 pip install selenium
 ```
 
-Download the [Chrome WebDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) based on your chrome version 
+Download the [Chrome WebDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) based on your chrome version & extract it
 
 
 ## Launch the main.py
