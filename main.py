@@ -18,9 +18,9 @@ driver.get('https://inscrm-uat.successit.net/AllInsCRM/#/Login')
 # driver.get("https://inscrm-uat.successit.net/AllInsCRM/#/Login")
 # login
 username = driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-login/div/main/div/div/div/div/div[2]/div/div/form/div/div[1]/div/div[1]/div/wm-input/input')
-username.send_keys("admin@uat.com")
+username.send_keys("admin@ua*.com")
 password = driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-login/div/main/div/div/div/div/div[2]/div/div/form/div/div[1]/div/div[2]/div/wm-input/input')
-password.send_keys("Success!23")
+password.send_keys("Success!2*")
 # WebDriverWait(driver, 20).until(EC.element_to_be_clickable((find_element_by_name('loginButton'), "loginButton"))).click()
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "loginButton"))).click()
 # click quotation
