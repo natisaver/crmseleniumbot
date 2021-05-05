@@ -12,6 +12,6 @@ Download the [Chrome WebDriver](https://sites.google.com/a/chromium.org/chromedr
 
 ## Launch the main.py
 ```bash
-nodemon calculator.js
+yayeet
 ```
 
