@@ -18,16 +18,34 @@ driver.get('https://inscrm-uat.successit.net/AllInsCRM/#/Login')
 # driver.get("https://inscrm-uat.successit.net/AllInsCRM/#/Login")
 # login
 username = driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-login/div/main/div/div/div/div/div[2]/div/div/form/div/div[1]/div/div[1]/div/wm-input/input')
-username.send_keys("admin@ua*.com")
+username.send_keys("admin@uat.com")
 password = driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-login/div/main/div/div/div/div/div[2]/div/div/form/div/div[1]/div/div[2]/div/wm-input/input')
-password.send_keys("Success!2*")
-# WebDriverWait(driver, 20).until(EC.element_to_be_clickable((find_element_by_name('loginButton'), "loginButton"))).click()
+password.send_keys("Success!23")
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.NAME, "loginButton"))).click()
 # click quotation
-driver.get('https://inscrm-uat.successit.net/AllInsCRM/#/Quotation_List_v1')
-driver.find_elements_by_css_selector(".btn .app-button .dropdown-toggle .btn-primary")
-
-# driver.find_element_by_anchor('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-dashboard/div/main/div/aside/app-partial-leftnav/section/ul/li[2]/a[2]/span[2]')
 # driver.find_element_by_css_selector("a[name='QuotationLink_SinglePage']").click()
-driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-quotation_list_v1/div/main/div/div/div[2]/div[1]/div/div/div[3]/div[3]/div/div[3]/button').click()
-driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-quotation_list_v1/div/main/div/div/div[2]/div[1]/div/div/div[3]/div[3]/div/div[3]/ul/li[2]/a').click()
+try:
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.NAME, "QuotationLink_SinglePage"))
+    )
+except:
+    print("hello")
+
+
+try:
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.LINK_TEXT, "Quotation"))
+    )
+except:
+    print("hello")
+
+# driver.get('https://inscrm-uat.successit.net/AllInsCRM/#/Quotation_List_v1').click()
+# # driver.find_elements_by_link_text('Quotation')
+
+
+
+# # driver.find_element_by_anchor('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-dashboard/div/main/div/aside/app-partial-leftnav/section/ul/li[2]/a[2]/span[2]')
+# # driver.find_element_by_css_selector("a[name='QuotationLink_SinglePage']").click()
+# driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-quotation_list_v1/div/main/div/div/div[2]/div[1]/div/div/div[3]/div[3]/div/div[3]/button').click()
+# driver.find_element_by_xpath('//*[@id="ng-app"]/app-root/app-page-outlet/app-page-quotation_list_v1/div/main/div/div/div[2]/div[1]/div/div/div[3]/div[3]/div/div[3]/ul/li[2]/a').click()
+
